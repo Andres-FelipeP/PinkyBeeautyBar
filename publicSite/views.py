@@ -68,3 +68,8 @@ def product(request, product_id):
     return render(request, 'productPage.html', {'pinky_beauty_bar_info':pinky_beauty_bar_info,'product': product, 'benefits':benefits, 'process':process, 'myths':myths, 'recommendations': recommendations, 'photo_gallery': photo_gallery, 'video_gallery': video_gallery})
 
 
+from django.http import JsonResponse
+
+def ping(request):
+    return JsonResponse({"status": "ok"})
+
